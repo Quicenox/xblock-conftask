@@ -1,0 +1,83 @@
+/* CSS for ConfTaskXBlock */
+
+.ace_editor {
+    border: 1px solid lightgray;
+    margin: auto;
+    height: 200px;
+    width: 80%;
+  }
+  
+  .scrollmargin {
+    height: 50px;
+    text-align: center;
+  }
+  
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  legend {
+    font-size: 18px;
+    font-weight: 600;
+    width: auto;
+    color: #2b6447;
+  }
+  
+  fieldset {
+    min-width: 0;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid rgba(43, 100, 71, 0.2);
+  }
+  
+  input[type="file"].hidden {
+    visibility: hidden;
+    width: 15rem;
+    margin-left: -15rem;
+  }
+  
+  a:link {
+    color: white;
+  }
+  
+  .bg-header {
+    background-color: rgba(43, 100, 71, 0.8);
+  }
+  
+  .btn-vo {
+    background-color: #2b6447;
+    color: white;
+  }
+  .btn-vo:hover {
+    background-color: #6c9a06;
+    color: white;
+  }
+  
+  .btn-va {
+    background-color: #6c9a06;
+    color: white;
+  }
+  .btn-va:hover {
+    background-color: #2b6447;
+    color: white;
+  }
+  .btn-voo {
+    background-color: rgba(43, 100, 71,0.8);
+  }
+  
+  .logo-max {
+      /* color:white; */
+      color: white;
+      float:right;
+      cursor: pointer;
+  }
+  .logo-delete {
+    color: #2b6447;
+    cursor: pointer;
+  }
+  .logo-edit {
+    color: #6c9a06;
+    cursor: pointer;
+  }
+  

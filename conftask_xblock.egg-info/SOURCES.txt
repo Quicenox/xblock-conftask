@@ -1,0 +1,13 @@
+setup.py
+conftask/__init__.py
+conftask/conftask.py
+conftask/static/README.txt
+conftask/static/css/conftask.css
+conftask/static/html/conftask.html
+conftask/static/js/src/conftask.js
+conftask_xblock.egg-info/PKG-INFO
+conftask_xblock.egg-info/SOURCES.txt
+conftask_xblock.egg-info/dependency_links.txt
+conftask_xblock.egg-info/entry_points.txt
+conftask_xblock.egg-info/requires.txt
+conftask_xblock.egg-info/top_level.txt
