@@ -16,16 +16,14 @@ function ConfTaskXBlock(runtime, element) {
         });
     });
 
-
-
-
+    ace.config.set('basePath','/static/js/src/src-min-noconflict');
     var editor = ace.edit('editor');
 
     editor.getSession().setMode("ace/mode/c_cpp");
     editor.getSession().setUseWorker(false);
     editor.setHighlightActiveLine(false);
     editor.setShowPrintMargin(false);
-    ace.require("ace/ext/language_tools");
+    ace.require("/static/js/src/src-min-noconflict/ext-language_tools");
 
     editor.setOptions({
         enableBasicAutocompletion: true,
@@ -68,7 +66,7 @@ function ConfTaskXBlock(runtime, element) {
     }
 
     //Expandir
-    $('.logo-max', element).click(function (eventObject) {
+    $('.logo-max', element).click(function () {
         let elem = document.getElementById("editor");
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
@@ -81,20 +79,19 @@ function ConfTaskXBlock(runtime, element) {
         }
     });
 
-
     //agregar filas a la tabla Entrada
     $('#agregarEntrada', element).click(function () {
         var entrada = document.getElementsByName('entrada')[0];
-        if (entrada.id == "entrada") {            
+        if (entrada.id == "entrada") {
             var variableEnt = document.getElementById("inputBanderaEnt").value;
             var tipoEnt = document.getElementById("tipoEnt").value;
             var fila = "<tr><td>" + variableEnt + "</td><td>" + tipoEnt +
-            `</td><td><div class="material-icons logo-edit" id="editar">edit</div>` +
-            `</td><td><div class="material-icons logo-delete" id="delete">delete</div></td></tr>`;
+                `</td><td><div class="material-icons logo-edit" id="editar">edit</div>` +
+                `</td><td><div class="material-icons logo-delete" id="delete">delete</div></td></tr>`;
             var btn = document.createElement("TR");
             btn.innerHTML = fila;
             document.getElementById("tabla1").appendChild(btn);
-            document.getElementById('inputBanderaEnt').value = "";            
+            document.getElementById('inputBanderaEnt').value = "";
         }
         // editar fila
         $("#tablaEntrada").on("click", "#editar", function () {
@@ -110,8 +107,7 @@ function ConfTaskXBlock(runtime, element) {
             $(this).parents("tr").remove();
         });
     });
-    
-    
+
     //agregar filas a la tabla salida
     $('#agregarSalida', element).click(function () {
         var salida = document.getElementsByName('salida')[0];
@@ -119,12 +115,12 @@ function ConfTaskXBlock(runtime, element) {
             var variableSal = document.getElementById("inputBanderaSal").value;
             var tipoSal = document.getElementById("tipoSal").value;
             var fila = "<tr><td>" + variableSal + "</td><td>" + tipoSal +
-            `</td><td><div class="material-icons logo-edit" id="editar">edit</div>` +
-            `</td><td><div class="material-icons logo-delete" id="delete">delete</div></td></tr>`;
+                `</td><td><div class="material-icons logo-edit" id="editar">edit</div>` +
+                `</td><td><div class="material-icons logo-delete" id="delete">delete</div></td></tr>`;
             var btn = document.createElement("TR");
             btn.innerHTML = fila;
             document.getElementById("tabla2").appendChild(btn);
-            document.getElementById('inputBanderaSal').value = "";   
+            document.getElementById('inputBanderaSal').value = "";
         }
         // editar fila
         $("#tablaSalida").on("click", "#editar", function () {
