@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Configurar tarea</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card text-center">
-                    <div class="card-header  card-header bg-header">
+    <div class="contenedor">
+        <div class="linea">
+            <div class="columna-sm-12">
+                <div class="tarjeta texto-centrar">
+                    <div class="tarjeta-encabezado  tarjeta-encabezado bg-encabezado">
                         <i class="material-icons logo-max" title="Maximizar">fullscreen</i>
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" style="color: black"><strong>Código</strong></a>
+                        <ul class="navegacion navegacion-solapa tarjeta-encabezado-solapa">
+                            <li class="navegacion-item">
+                                <a class="navegacion-link activo" style="color: black"><strong>Código</strong></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="card-body">
+                    <div class="tarjeta-cuerpo">
                         <div id="editor" style="width: 98%"></div><br>
-                        <div class="text-center">
-                            <label for="file-input" class="btn btn-va file-label">Subir Fuentes</label>
+                        <div class="texto-centrar">
+                            <label for="file-input" class="btn btn-va mostrar-etiqueta">Subir Fuentes</label>
                             <input id="file-input" class="hidden" type="file" />
                             <label class="btn btn-vo" id="btn_descargar">
                                 <a download="filename.c" id="a_descargar">Descargar Fuentes</a>
@@ -32,15 +34,15 @@
                     </div>
                 </div>
                 <br>
-                <div class="card text-center">
-                    <div class="card-header  card-header bg-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" style="color: black"><strong>Output</strong></a>
+                <div class="tarjeta texto-centrar">
+                    <div class="tarjeta-encabezado  tarjeta-encabezado bg-encabezado">
+                        <ul class="navegacion navegacion-solapa tarjeta-encabezado-solapa">
+                            <li class="navegacion-item">
+                                <a class="navegacion-link activo" style="color: black"><strong>Output</strong></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="card-body">
+                    <div class="tarjeta-cuerpo">
                         <textarea name="respCodeServer" id="respCodeServer" cols="40" rows="5" disabled
                             style="resize: none; font-family: Droid Sans Mono, monospace, monospace, Droid Sans Fallback; font-size: 14px; line-height: 19px"></textarea>
                         <div>
@@ -51,38 +53,38 @@
             </div>
         </div>
         <br>
-        <div class="card text-center">
-            <div class="card-header  card-header bg-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" style="color: black"><strong>Configuración variables de
+        <div class="tarjeta texto-centrar">
+            <div class="tarjeta-encabezado  tarjeta-encabezado bg-encabezado">
+                <ul class="navegacion navegacion-solapa tarjeta-encabezado-solapa">
+                    <li class="navegacion-item">
+                        <a class="navegacion-link activo" style="color: black"><strong>Configuración variables de
                                 entrada</strong></a>
                     </li>
                 </ul>
             </div>
-            <div class="card-body">
-                <div class="row" name="entrada" id="entrada">
-                    <div class="col-md-6">
+            <div class="tarjeta-cuerpo">
+                <div class="linea" name="entrada" id="entrada">
+                    <div class="columna-md-6">
                         <p><strong>Entradas</strong></p>
                         <form name="formEnt">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <div class="formar-linea">
+                                <div class="formar-grupo columna-md-6">
                                     <label>Nombre</label>
-                                    <input type="text" id="inputBanderaEnt" placeholder="Variable">
+                                    <input type="text" id="inputBanderaEnt" placeholder="Variable" class="formar-control personalizar-seleccionar-sm">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="formar-grupo columna-md-6">
                                     <label>Tipo</label>
-                                    <select id="tipoEnt" class="form-control custom-select-sm">
+                                    <select id="tipoEnt" class="formar-control personalizar-seleccionar-sm">
                                         <option>Archivo</option>
                                         <option>Dato</option>
                                     </select>
-                                </div>  
+                                </div>
                             </div>
                             <button type="button" class="btn btn-va" id="agregarEntrada">Agregar</button>
                         </form>
                     </div>
-                    <div class="col-md-6" name="tablaEnt">
-                        <table class="table" id="tablaEntrada">
+                    <div class="columna-md-6" name="tablaEnt">
+                        <table class="tabla" id="tablaEntrada">
                             <thead style="background-color: rgba(43, 100, 71,0.1)">
                                 <tr>
                                     <th scope="col">Nombre</th>
@@ -100,28 +102,28 @@
             </div>
         </div>
         <br>
-        <div class="card text-center">
-            <div class="card-header  card-header bg-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active " style="color: black"><strong>Configuración variables de
+        <div class="tarjeta texto-centrar">
+            <div class="tarjeta-encabezado  tarjeta-encabezado bg-encabezado">
+                <ul class="navegacion navegacion-solapa tarjeta-encabezado-solapa">
+                    <li class="navegacion-item">
+                        <a class="navegacion-link activo " style="color: black"><strong>Configuración variables de
                                 salida</strong></a>
                     </li>
                 </ul>
             </div>
-            <div class="card-body">
-                <div id="salida" name="salida" class="row">
-                    <div class="col-md-6">
+            <div class="tarjeta-cuerpo">
+                <div id="salida" name="salida" class="linea">
+                    <div class="columna-md-6">
                         <p><strong>Entradas</strong></p>
                         <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <div class="formar-linea">
+                                <div class="formar-grupo columna-md-6">
                                     <label>Nombre</label>
-                                    <input type="text" id="inputBanderaSal" placeholder="Variable">
+                                    <input type="text" id="inputBanderaSal" placeholder="Variable" class="formar-control personalizar-seleccionar-sm">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="formar-grupo columna-md-6">
                                     <label>Tipo</label>
-                                    <select id="tipoSal" class="form-control custom-select-sm">
+                                    <select id="tipoSal" class="formar-control personalizar-seleccionar-sm">
                                         <option>Archivo</option>
                                         <option>Dato</option>
                                     </select>
@@ -130,8 +132,8 @@
                             <button type="button" class="btn btn-va" id="agregarSalida">Agregar</button>
                         </form>
                     </div>
-                    <div class="col-md-6">
-                        <table class="table" id="tablaSalida">
+                    <div class="columna-md-6">
+                        <table class="tabla" id="tablaSalida">
                             <thead style="background-color: rgba(43, 100, 71,0.1)">
                                 <tr>
                                     <th scope="col">Nombre</th>
@@ -147,6 +149,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </body>
+
 </html>
